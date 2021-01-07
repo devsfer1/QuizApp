@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.start {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #A671FB;
+}
+
+.start__title {
+    margin: 0 0 30px 0;
+    font-size: 36px;
+    color: #fff;
+}
+
+.start__button {
+    cursor: pointer;
+    outline: none;
+    padding: 20px 40px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
