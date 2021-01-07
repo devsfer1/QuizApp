@@ -5,6 +5,17 @@
     font-family: 'Roboto';
 }
 
+body {
+    background-color: #A671FB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*** Estilização ***/
+
 .start {
     width: 100vw;
     height: 100vh;
@@ -12,7 +23,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #A671FB;
 }
 
 .start__title {
@@ -25,12 +35,37 @@
     cursor: pointer;
     outline: none;
     padding: 20px 40px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #fff;
+    border: solid 1px #8b4df0;
     border-radius: 6px;
+    transition: ease 0.2s;
+}
+
+.start__button:hover {
+    background-color: #e0e0e0;
+}
+
+.instructions {
+    width: 70vw;
+    height: 80vh;
+    background-color: #5608d4;
+    border-radius: 6px;
+    border: solid 1px #6410eb;
+    padding: 30px 40px;
+}
+
+.instructions__title {
+    color: #fff;
+    font-size: 30x;
+    margin: 0 0 30px 0;
+}
+
+.instructions__subtitle {
+    margin: 0 0 20px 0;
+    color: #ebebeb;
 }
 
 .hide {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
 }
