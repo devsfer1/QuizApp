@@ -7,6 +7,7 @@ const questionElement = document.getElementById('question');
 const questionNumber = document.getElementById('question-number');
 const questionContainer = document.getElementById('questions-container');
 const questionImg = document.getElementById('question-img');
+const answerButtonsElement = document.getElementById('answer-buttons');
 var score = 0;
 
 var questionPosition, currentQuestionIndex;
@@ -26,7 +27,7 @@ function start() {
 function startQuiz() {
     questionContainer.classList.remove('hide'); 
     instructions.classList.add('hide');    
-    questionPosition = questions.sort()
+    questionPosition = questions.sort();
     currentQuestionIndex = 0;
     
     showQuestion(questionPosition[currentQuestionIndex]);
@@ -35,19 +36,42 @@ function startQuiz() {
 //Mostrar questão
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    questionNumber.innerText = currentQuestionIndex + 1;   
+    questionNumber.innerText = 'Questão ' + currentQuestionIndex + 1; 
+    questionImg.src = question.img;
+
+    //Mostrar respostas
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        if(answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+
+        button.addEventListener('click', selectAnswer);
+        answerButtonsElement.appendChild(button);
+    });
 }
 
+//Respostas
+function selectAnswer(e) {
+    const clickedButton = e.target;       
+    const correctButton = clickedButton.dataset.correct;
+}
 
 
 //Questões
 const questions = [
     {
-        question: 'Qual o nome desse animal',
+        question: 'Qual o nome dessa série de filmes?',
+        img: 'img-1.jpg',
         answers: [
-            {text: '4', correct: true},
-            {text: '22', correct: false}
-        ]
+            {text: 'Harry Potter', correct: true},
+            {text: 'Percy Jackson', correct: false},
+            {text: 'Divergente', correct: false},
+            {text: 'Jogos Vorazes', correct: false}
+        ],
+        
     },
     {
         question: 'Questão 2',
@@ -67,17 +91,6 @@ const questions = [
 
 
 
-var images = [];
-images[0] = 'img-1.jpg';
-
-for(let i = 0 ; i <= questions.length ; i++) {
-
-    var img = document.createElement('img');
-    img.src = images[i];
-
-    questionContainer.appendChild[img];
-
-}
 
 
 

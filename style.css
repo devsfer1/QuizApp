@@ -68,21 +68,43 @@ body {
 
 .questions-container {
     width: 70vw;
-    height: 80vh;
+    height: 90vh;
     background-color: #5608d4;
     border-radius: 6px;
     border: solid 1px #6410eb;
     padding: 30px 40px;    
     display: flex;
     flex-direction: column;
-    justify-content: center;   
+     
+    align-items: center;
 }
 
-.question-img {
-    margin: 0 auto;
+.question-image {
+    margin: 0 auto 20px auto;
     width: 80%;
     height: 300px;
     object-fit: cover;
+    border-radius: 6px;
+    border: solid 3px #6410eb;
+}
+
+.question-number {
+    color: #fff;
+    font-size: 30px;   
+    margin: 0 0 20px 0; 
+}
+
+.question-title {
+    margin: 0 0 15px 0;
+    color: #fff;
+    font-size: 24px;   
+    font-weight: 600;
+}
+
+.answer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1vw;
 }
 
 .hide {
