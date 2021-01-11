@@ -1,0 +1,8 @@
+- Botão para iniciar o Quiz
+- Classe para esconder elementos
+- Função para mostrar questões
+- Váriavel para mostrar número da questão
+- Váriavel de score que começa com 0
+- Aumentar score se usuário acertar
+- Váriavel para questões
+- Colorir botão com resposta certa ao a pessoa acertar

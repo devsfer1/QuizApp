@@ -66,6 +66,25 @@ body {
     color: #ebebeb;
 }
 
+.questions-container {
+    width: 70vw;
+    height: 80vh;
+    background-color: #5608d4;
+    border-radius: 6px;
+    border: solid 1px #6410eb;
+    padding: 30px 40px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.question-img {
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+}
+
 .hide {
     display: none;
 }
