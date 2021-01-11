@@ -4,13 +4,16 @@ const startScreen = document.getElementById('start-screen')
 const instructions = document.getElementById('instructions');
 const instructionsButton = document.getElementById('instructions-button');
 const questionElement = document.getElementById('question');
+const questionNumber = document.getElementById('question-number');
 const questionContainer = document.getElementById('questions-container');
+const questionImg = document.getElementById('question-img');
 var score = 0;
-var currentQuestionIndex;
+
+var questionPosition, currentQuestionIndex;
 
 //Eventos
 startButton.addEventListener('click', start);
-instructionsButton.addEventListener('click', showQuestion);
+instructionsButton.addEventListener('click', startQuiz);
 
 
 //Start screen
@@ -23,43 +26,59 @@ function start() {
 function startQuiz() {
     questionContainer.classList.remove('hide'); 
     instructions.classList.add('hide');    
+    questionPosition = questions.sort()
     currentQuestionIndex = 0;
-
-    showQuestion([currentQuestionIndex]);
+    
+    showQuestion(questionPosition[currentQuestionIndex]);
 }
 
 //Mostrar questão
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    
+    questionNumber.innerText = currentQuestionIndex + 1;   
 }
-
 
 
 
 //Questões
 const questions = [
     {
-        question: 'What is 2 + 2',
+        question: 'Qual o nome desse animal',
         answers: [
             {text: '4', correct: true},
             {text: '22', correct: false}
         ]
-    }
+    },
+    {
+        question: 'Questão 2',
+        answers: [
+            {text: '4', correct: true},
+            {text: '22', correct: false}
+        ]
+    },
+    {
+        question: 'Questão 3',
+        answers: [
+            {text: '4', correct: true},
+            {text: '22', correct: false}
+        ]
+    },
 ]
 
 
-var images = [];
-images[0] = 'img-1.jpg'
 
-for (i = 0; i < questions.length; i++) {
-    
+var images = [];
+images[0] = 'img-1.jpg';
+
+for(let i = 0 ; i <= questions.length ; i++) {
+
     var img = document.createElement('img');
     img.src = images[i];
-    img.className = 'question-img';
 
-    questionContainer.appendChild(img);
+    questionContainer.appendChild[img];
+
 }
+
 
 
 
