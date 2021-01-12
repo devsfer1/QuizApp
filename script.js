@@ -8,17 +8,20 @@ const questionNumber = document.getElementById('question-number');
 const questionContainer = document.getElementById('questions-container');
 const questionImg = document.getElementById('question-img');
 const answerButtonsElement = document.getElementById('answer-buttons');
-var score = 0;
+const finalScreen = document.getElementById('final-screen');
+const restartButton = document.getElementById('restart-button');
 
 var questionPosition, currentQuestionIndex;
 
 //Eventos
 startButton.addEventListener('click', start);
+restartButton.addEventListener('click', start);
 instructionsButton.addEventListener('click', startQuiz);
 
 
 //Start screen
 function start() {
+    finalScreen.classList.add('hide');
     instructions.classList.remove('hide');
     startScreen.classList.add('hide');
 }
@@ -29,23 +32,25 @@ function startQuiz() {
     instructions.classList.add('hide');    
     questionPosition = questions.sort();
     currentQuestionIndex = 0;
+    numberQuestion = 1;
+    score = 0;
     
     setNextQuestion();
 }
 
-  
-
 //Próxima questão
 function setNextQuestion() {
+    resetState();
     showQuestion(questionPosition[currentQuestionIndex]);
 }
 
-
+  
 //Mostrar questão
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    questionNumber.innerText = 'Questão ' + currentQuestionIndex + 1; 
+    questionNumber.innerText = 'Questão 0' + numberQuestion; 
     questionImg.src = question.img;
+    
 
     //Mostrar respostas
     question.answers.forEach(answer => {
@@ -66,31 +71,30 @@ function showQuestion(question) {
 function selectAnswer(e) {  
     const clickedButton = e.target;     
     const correctAnswer = clickedButton.dataset.correct;
-    clickedButton.addEventListener('click', () => {
-        currentQuestionIndex++   
-        setNextQuestion(); 
-    });
+    questionNumber.innerText = 'Questão ' + numberQuestion; 
+    currentQuestionIndex++   
+    numberQuestion++
 
-    
-    
-}
+    console.log(questionPosition.length);
+    console.log(currentQuestionIndex);
 
-//Definir classe para resposta desejada
-function setAnswerClass(element) {
-    clearAnswerClass(element);
-    if(correct) {
-        element.classList.add('correct');
-    } else {
-        element.classList.add('wrong');
+    if(questionPosition.length <= currentQuestionIndex) {
+        questionContainer.classList.add('hide');
+        finalScreen.classList.remove('hide');
     }
+
+    setNextQuestion();   
+
+     
 }
 
-//Limpar classe para próxima pergunta
-function clearAnswerClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
-}
 
+//Resetar respostas
+function resetState() {
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+    } 
+}
 
 //Questões
 const questions = [
@@ -109,15 +113,20 @@ const questions = [
         question: 'Qual o nome desse Anime?',
         img: 'img-2.jpg',
         answers: [
-            {text: '4', correct: true},
-            {text: '22', correct: false}
+            {text: 'Dragon Ball', correct: false},
+            {text: 'Bleach', correct: false},
+            {text: 'One Piece', correct: true},
+            {text: 'Attack on Titan', correct: false}
         ]
     },
     {
-        question: 'Questão 3',
+        question: 'Qual o nome desse jogo',
+        img: 'img-3.jpg',
         answers: [
-            {text: '4', correct: true},
-            {text: '22', correct: false}
+            {text: 'Devil May Cry', correct: false},
+            {text: 'God of War', correct: true},
+            {text: 'For Honor', correct: false},
+            {text: 'The Last of Us', correct: false}    
         ]
     },
 ]
