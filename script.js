@@ -36,7 +36,7 @@ function startQuiz() {
 //Mostrar questão
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    questionNumber.innerText = 'Questão ' + currentQuestionIndex + 1; 
+    questionNumber.innerText = 'Questão' + currentQuestionIndex + 1; 
     questionImg.src = question.img;
 
     //Mostrar respostas
@@ -54,7 +54,7 @@ function showQuestion(question) {
 }
 
 //Respostas
-function selectAnswer(e) {
+function selectAnswer(e) {  
     const clickedButton = e.target;       
     const correctButton = clickedButton.dataset.correct;
 }
