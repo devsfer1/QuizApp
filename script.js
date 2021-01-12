@@ -10,6 +10,8 @@ const questionImg = document.getElementById('question-img');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const finalScreen = document.getElementById('final-screen');
 const restartButton = document.getElementById('restart-button');
+var screenPoints = document.getElementById('points');
+const finalPoints = document.getElementById('final-points');
 
 var questionPosition, currentQuestionIndex;
 
@@ -22,6 +24,7 @@ instructionsButton.addEventListener('click', startQuiz);
 //Start screen
 function start() {
     finalScreen.classList.add('hide');
+    screenPoints.classList.add('hide');
     instructions.classList.remove('hide');
     startScreen.classList.add('hide');
 }
@@ -33,7 +36,7 @@ function startQuiz() {
     questionPosition = questions.sort();
     currentQuestionIndex = 0;
     numberQuestion = 1;
-    score = 0;
+    points = 0;
     
     setNextQuestion();
 }
@@ -49,6 +52,8 @@ function setNextQuestion() {
 function showQuestion(question) {
     questionElement.innerText = question.question;
     questionNumber.innerText = 'Questão 0' + numberQuestion; 
+    screenPoints.classList.remove('hide');
+    screenPoints.innerText = 'Pontos: ' + points;
     questionImg.src = question.img;
     
 
@@ -66,6 +71,9 @@ function showQuestion(question) {
     });
 }
 
+//Final screen
+
+
 
 //Respostas
 function selectAnswer(e) {  
@@ -74,18 +82,23 @@ function selectAnswer(e) {
     questionNumber.innerText = 'Questão ' + numberQuestion; 
     currentQuestionIndex++   
     numberQuestion++
+    
 
-    console.log(questionPosition.length);
-    console.log(currentQuestionIndex);
+    if(correctAnswer) {
+        points = points + 20;
+    }
 
+    screenPoints.innerText = 'Pontos: ' + points;
+    
     if(questionPosition.length <= currentQuestionIndex) {
         questionContainer.classList.add('hide');
         finalScreen.classList.remove('hide');
+        screenPoints.classList.add('hide');
+        finalPoints.innerText = 'Você fez uma pontuação total de: ' + points + ' Pontos'
     }
 
     setNextQuestion();   
 
-     
 }
 
 

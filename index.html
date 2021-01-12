@@ -7,6 +7,7 @@
 
     <!-- Estilização -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <div class="start" id="start-screen">
@@ -19,7 +20,7 @@
         <h3 class="instructions__subtitle">1. Leia a questão indicada</h3>
         <h3 class="instructions__subtitle">2. Marque a resposta que você achar estar correta</h3>
         <h3 class="instructions__subtitle">3. Após isso, clique para ir para a próxima questão</h3>
-        <h3 class="instructions__subtitle">4. Você ganha 10 Pontos por cada questão certa.</h3>
+        <h3 class="instructions__subtitle">4. Você ganha 10 Pontos por cada questão certa.  </h3>
         <button class="start__button" id="instructions-button">Começar</button>
     </div>
     <div class="questions-container hide" id="questions-container">
@@ -33,9 +34,10 @@
     </div>
     <div class="final-screen hide" id="final-screen">
         <h1 class="instructions__title">Parabéns! Voce finalizou o QuizApp.</h1>
-        <h3 class="instructions__subtitle">Veja Abaixo sua pontuação:</h3>
-        <button id="restart-button">Restart</button>
+        <h3 class="instructions__subtitle" id="final-points">Você fez uma pontuação total de:</h3>
+        <button class="start__button" id="restart-button">Reiniciar jogo</button>
     </div>
+    <h4 class="points hide" id="points">Pontos:</h4>
 
     
     <!-- Script -->    

@@ -70,7 +70,7 @@ body {
 }
 
 .questions-container {
-    width: 70vw;
+    width: 75vw;
     height: 90vh;
     background-color: #AF27FE;
     border-radius: 6px;
@@ -78,13 +78,13 @@ body {
     padding: 30px 40px;    
     display: flex;
     flex-direction: column;
-     
     align-items: center;
+    position: relative;
 }
 
 .question-image {
     margin: 0 auto 20px auto;
-    width: 60%;
+    width: 50%;
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
@@ -139,4 +139,12 @@ body {
 
 .hide {
     display: none;
+}
+
+.points {
+    position: absolute;
+    z-index: 999;
+    left: 70%;
+    top: 11%;
+    color: #fff;
 }
