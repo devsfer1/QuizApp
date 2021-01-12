@@ -1,0 +1,38 @@
+/*** Mobile ***/
+@media screen and (max-width: 700px) {
+    .instructions,
+    .questions-container,
+    .final-screen {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .questions-container {
+        padding: 80px 40px;
+    }
+
+    .question-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .question-title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .answer-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3vw;
+    }
+
+    .btn {
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .points {
+        top: 5%;
+    }
+}
