@@ -30,13 +30,21 @@ function startQuiz() {
     questionPosition = questions.sort();
     currentQuestionIndex = 0;
     
+    setNextQuestion();
+}
+
+  
+
+//Próxima questão
+function setNextQuestion() {
     showQuestion(questionPosition[currentQuestionIndex]);
 }
+
 
 //Mostrar questão
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    questionNumber.innerText = 'Questão' + currentQuestionIndex + 1; 
+    questionNumber.innerText = 'Questão ' + currentQuestionIndex + 1; 
     questionImg.src = question.img;
 
     //Mostrar respostas
@@ -53,10 +61,34 @@ function showQuestion(question) {
     });
 }
 
+
 //Respostas
 function selectAnswer(e) {  
-    const clickedButton = e.target;       
-    const correctButton = clickedButton.dataset.correct;
+    const clickedButton = e.target;     
+    const correctAnswer = clickedButton.dataset.correct;
+    clickedButton.addEventListener('click', () => {
+        currentQuestionIndex++   
+        setNextQuestion(); 
+    });
+
+    
+    
+}
+
+//Definir classe para resposta desejada
+function setAnswerClass(element) {
+    clearAnswerClass(element);
+    if(correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    }
+}
+
+//Limpar classe para próxima pergunta
+function clearAnswerClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
 }
 
 
@@ -74,7 +106,8 @@ const questions = [
         
     },
     {
-        question: 'Questão 2',
+        question: 'Qual o nome desse Anime?',
+        img: 'img-2.jpg',
         answers: [
             {text: '4', correct: true},
             {text: '22', correct: false}
@@ -88,6 +121,7 @@ const questions = [
         ]
     },
 ]
+
 
 
 

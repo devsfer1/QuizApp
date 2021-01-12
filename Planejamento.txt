@@ -7,4 +7,4 @@
 - Aumentar score se usuário acertar
 - Váriavel para questões
 - Colorir botão com resposta certa ao a pessoa acertar
-- 
+
