@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #A671FB;
+    background-color: #E6D5FF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,18 +28,21 @@ body {
 .start__title {
     margin: 0 0 30px 0;
     font-size: 36px;
-    color: #fff;
+    color: #AF27FE;
 }
 
 .start__button {
     cursor: pointer;
     outline: none;
     padding: 20px 40px;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 600;
     background-color: #fff;
-    border: solid 1px #8b4df0;
+    border: solid 2px #AF27FE;
     border-radius: 6px;
     transition: ease 0.2s;
+    color: #AF27FE;
+    box-shadow: 12px -6px 26px -19px rgba(0,0,0,0.75);
 }
 
 .start__button:hover {
@@ -49,9 +52,9 @@ body {
 .instructions {
     width: 70vw;
     height: 80vh;
-    background-color: #5608d4;
+    background-color: #AF27FE;
     border-radius: 6px;
-    border: solid 1px #6410eb;
+    box-shadow: 12px -6px 26px -19px rgba(0,0,0,0.75);
     padding: 30px 40px;
 }
 
@@ -69,9 +72,9 @@ body {
 .questions-container {
     width: 70vw;
     height: 90vh;
-    background-color: #5608d4;
+    background-color: #AF27FE;
     border-radius: 6px;
-    border: solid 1px #6410eb;
+    box-shadow: 12px -6px 26px -19px rgba(0,0,0,0.75);
     padding: 30px 40px;    
     display: flex;
     flex-direction: column;
@@ -81,10 +84,10 @@ body {
 
 .question-image {
     margin: 0 auto 20px auto;
-    width: 80%;
+    width: 60%;
     height: 300px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 10px;
     border: solid 3px #6410eb;
 }
 
@@ -105,6 +108,24 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1vw;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #fff;
+    border: solid 1px #8b4df0;
+    border-radius: 6px;
+    transition: ease 0.2s;
+    color: #AF27FE;
+    font-weight: 600;
+    box-shadow: 12px -6px 26px -19px rgba(0,0,0,0.75);
+}
+
+.btn:hover {
+    background-color: #e0e0e0; 
 }
 
 .hide {
