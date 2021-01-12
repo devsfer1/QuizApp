@@ -1,14 +1,30 @@
 /*** Mobile ***/
 @media screen and (max-width: 700px) {
+    .start__title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .start__button {
+        padding: 20px 30px;
+        font-size: 20px
+    }
+
     .instructions,
     .questions-container,
     .final-screen {
         width: 100vw;
         height: 100vh;
+        padding: 80px 40px;
     }
 
-    .questions-container {
-        padding: 80px 40px;
+
+    .instructions__title {
+        font-size: 28px;
+    }
+
+    .instructions__subtitle {
+        font-size: 16px;
     }
 
     .question-image {
