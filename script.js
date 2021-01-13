@@ -158,8 +158,8 @@ const questions = [
         answers: [
             {text: 'Rato selvagem', correct: false},
             {text: 'Tamanduá', correct: false},
-            {text: 'Tatu', correct: false},
-            {text: 'Porco-espinho', correct: true}    
+            {text: 'Ouriço', correct: true},
+            {text: 'Porco-espinho', correct: false}    
         ]
     },
     {
