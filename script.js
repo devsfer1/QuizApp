@@ -85,7 +85,7 @@ function selectAnswer(e) {
     
 
     if(correctAnswer) {
-        points = points + 20;
+        points = points + 10;
     }
 
     screenPoints.innerText = 'Pontos: ' + points;
