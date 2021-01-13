@@ -71,10 +71,6 @@ function showQuestion(question) {
     });
 }
 
-//Final screen
-
-
-
 //Respostas
 function selectAnswer(e) {  
     const clickedButton = e.target;     
@@ -83,7 +79,6 @@ function selectAnswer(e) {
     currentQuestionIndex++   
     numberQuestion++
     
-
     if(correctAnswer) {
         points = points + 10;
     }
@@ -98,9 +93,7 @@ function selectAnswer(e) {
     }
 
     setNextQuestion();   
-
 }
-
 
 //Resetar respostas
 function resetState() {
@@ -120,7 +113,6 @@ const questions = [
             {text: '7', correct: false},
             {text: '9', correct: true}
         ],
-        
     },
     {
         question: 'Qual o nome da irmã da Gamora, do Avangers?',
