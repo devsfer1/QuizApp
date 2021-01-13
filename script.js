@@ -112,36 +112,106 @@ function resetState() {
 //Questões
 const questions = [
     {
-        question: 'Qual o nome dessa série de filmes?',
+        question: 'Quantos episódios tem a saga Star-Wars?',
         img: 'img-1.jpg',
         answers: [
-            {text: 'Harry Potter', correct: true},
-            {text: 'Percy Jackson', correct: false},
-            {text: 'Divergente', correct: false},
-            {text: 'Jogos Vorazes', correct: false}
+            {text: '6', correct: false},
+            {text: '8', correct: false},
+            {text: '7', correct: false},
+            {text: '9', correct: true}
         ],
         
     },
     {
-        question: 'Qual o nome desse Anime?',
+        question: 'Qual o nome da irmã da Gamora, do Avangers?',
         img: 'img-2.jpg',
         answers: [
-            {text: 'Dragon Ball', correct: false},
-            {text: 'Bleach', correct: false},
-            {text: 'One Piece', correct: true},
-            {text: 'Attack on Titan', correct: false}
+            {text: 'Scarlet', correct: false},
+            {text: 'Nebulosa', correct: false},
+            {text: 'Nebula', correct: true},
+            {text: 'Tempestade', correct: false}
         ]
     },
     {
-        question: 'Qual o nome desse jogo',
+        question: 'Qual o nome da mascote da Equipe Rocket em Pokemon?',
         img: 'img-3.jpg',
         answers: [
-            {text: 'Devil May Cry', correct: false},
-            {text: 'God of War', correct: true},
-            {text: 'For Honor', correct: false},
-            {text: 'The Last of Us', correct: false}    
+            {text: 'Mewtwo', correct: false},
+            {text: 'Charmander', correct: false},
+            {text: 'Garfield', correct: false},
+            {text: 'Meowth', correct: true}    
         ]
     },
+    {
+        question: 'Qual o nome do metal que envolve o esqueleto e garras de Wolverine?',
+        img: 'img-4.png',
+        answers: [
+            {text: 'Titanium', correct: false},
+            {text: 'Adamantium', correct: true},
+            {text: 'Vibranium', correct: false},
+            {text: 'Platine', correct: false}    
+        ]
+    },
+    {
+        question: 'O Sonic é um...',
+        img: 'img-5.jpg',
+        answers: [
+            {text: 'Rato selvagem', correct: false},
+            {text: 'Tamanduá', correct: false},
+            {text: 'Tatu', correct: false},
+            {text: 'Porco-espinho', correct: true}    
+        ]
+    },
+    {
+        question: 'Em qual filme Thanos apareceu pela primeira vez?',
+        img: 'img-6.jpg',
+        answers: [
+            {text: 'Thor 2', correct: false},
+            {text: 'Vingadores', correct: true},
+            {text: 'Guardiões da galáxia vol I', correct: false},
+            {text: 'Homem de ferro', correct: false}    
+        ]
+    },
+    {
+        question: 'Em que ano a Disney comprou a Marvel?',
+        img: 'img-7.jpg',
+        answers: [
+            {text: '2015', correct: false},
+            {text: '2017', correct: false},
+            {text: '2010', correct: false},
+            {text: '2009', correct: true}    
+        ]
+    },
+    {
+        question: 'Qual o nome do Dragão de O Hobbit?',
+        img: 'img-8.jpg',
+        answers: [
+            {text: 'Gollum', correct: false},
+            {text: 'Smeagol', correct: false},
+            {text: 'Smaug', correct: true},
+            {text: 'Godzilla', correct: false}    
+        ]
+    },
+    {
+        question: 'No Universo Cinematográfico da Marvel, qual dos personagens abaixo conseguiu levantar o Mjölnir de Thor?',
+        img: 'img-9.jpg',
+        answers: [
+            {text: 'Viúva negra', correct: false},
+            {text: 'Homem de Ferro', correct: false},
+            {text: 'Thanos', correct: false},
+            {text: 'Visão', correct: true}    
+        ]
+    },
+    {
+        question: 'Quem é esse personagem de Star wars?',
+        img: 'img-10.jpg',
+        answers: [
+            {text: 'P3-CO', correct: false},
+            {text: 'PO-C3', correct: false},
+            {text: 'C3-PO', correct: true},
+            {text: 'SO-P3', correct: false}    
+        ]
+    }
 ]
 
 

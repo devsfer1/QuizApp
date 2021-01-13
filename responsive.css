@@ -39,13 +39,17 @@
 
     .answer-buttons {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-gap: 3vw;
+        width: 100%;
+        height: 150px;  
     }
 
     .btn {
         padding: 10px;
         display: block;
         width: 100%;
+        height: 100%;
     }
 
     .points {
