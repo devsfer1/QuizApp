@@ -113,7 +113,7 @@ function resetState() {
 const questions = [
     {
         question: 'Quantos episódios tem a saga Star-Wars?',
-        img: 'img-1.jpg',
+        img: 'img-1.webp',
         answers: [
             {text: '6', correct: false},
             {text: '8', correct: false},
@@ -124,7 +124,7 @@ const questions = [
     },
     {
         question: 'Qual o nome da irmã da Gamora, do Avangers?',
-        img: 'img-2.jpg',
+        img: 'img-2.webp',
         answers: [
             {text: 'Scarlet', correct: false},
             {text: 'Nebulosa', correct: false},
@@ -134,7 +134,7 @@ const questions = [
     },
     {
         question: 'Qual o nome da mascote da Equipe Rocket em Pokemon?',
-        img: 'img-3.jpg',
+        img: 'img-3.webp',
         answers: [
             {text: 'Mewtwo', correct: false},
             {text: 'Charmander', correct: false},
@@ -144,7 +144,7 @@ const questions = [
     },
     {
         question: 'Qual o nome do metal que envolve o esqueleto e garras de Wolverine?',
-        img: 'img-4.png',
+        img: 'img-4.webp',
         answers: [
             {text: 'Titanium', correct: false},
             {text: 'Adamantium', correct: true},
@@ -154,7 +154,7 @@ const questions = [
     },
     {
         question: 'O Sonic é um...',
-        img: 'img-5.jpg',
+        img: 'img-5.webp',
         answers: [
             {text: 'Rato selvagem', correct: false},
             {text: 'Tamanduá', correct: false},
@@ -164,7 +164,7 @@ const questions = [
     },
     {
         question: 'Em qual filme Thanos apareceu pela primeira vez?',
-        img: 'img-6.jpg',
+        img: 'img-6.webp',
         answers: [
             {text: 'Thor 2', correct: false},
             {text: 'Vingadores', correct: true},
@@ -174,7 +174,7 @@ const questions = [
     },
     {
         question: 'Em que ano a Disney comprou a Marvel?',
-        img: 'img-7.jpg',
+        img: 'img-7.webp',
         answers: [
             {text: '2015', correct: false},
             {text: '2017', correct: false},
@@ -184,7 +184,7 @@ const questions = [
     },
     {
         question: 'Qual o nome do Dragão de O Hobbit?',
-        img: 'img-8.jpg',
+        img: 'img-8.webp',
         answers: [
             {text: 'Gollum', correct: false},
             {text: 'Smeagol', correct: false},
@@ -194,7 +194,7 @@ const questions = [
     },
     {
         question: 'No Universo Cinematográfico da Marvel, qual dos personagens abaixo conseguiu levantar o Mjölnir de Thor?',
-        img: 'img-9.jpg',
+        img: 'img-9.webp',
         answers: [
             {text: 'Viúva negra', correct: false},
             {text: 'Homem de Ferro', correct: false},
@@ -204,7 +204,7 @@ const questions = [
     },
     {
         question: 'Quem é esse personagem de Star wars?',
-        img: 'img-10.jpg',
+        img: 'img-10.webp',
         answers: [
             {text: 'P3-CO', correct: false},
             {text: 'PO-C3', correct: false},
