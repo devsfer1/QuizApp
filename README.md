@@ -4,12 +4,12 @@
 
 </p>
 <br>
-<h2>Sobre</h2>
+<h2>About</h2>
 <hr>
-<p>Quiz App Desenvolvido com HTML5 CSS3 & Javascript.</p>
+<p>Quiz with functions to choose answer, move on to the next question, with a point accumulator that adds points to each right answer showing the user's result at the end, after the end the possibility to reset the quiz, all of this happening without the need to update the page.</p>
 <h2>Links</h2>
 <hr>
-<p>Demonstração: <a href="https://jsquizapps.netlify.app/">https://jsquizapps.netlify.app/ </a></p>
-<p>Repositório: <a href="https://github.com/devsfe/QuizApp">https://github.com/devsfe/QuizApp </a></p>
+<p>Demo: <a href="https://jsquizapps.netlify.app/">https://jsquizapps.netlify.app/ </a></p>
+<p>Repo: <a href="https://github.com/devsfe/QuizApp">https://github.com/devsfe/QuizApp </a></p>
 <p>Javascript50: <a href="https://github.com/devsfe/Javascript50">https://github.com/devsfe/Javascript50 </a></p>
 
