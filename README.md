@@ -26,7 +26,7 @@
 <br>
 <h2>Links</h2>
 <hr>
-<p>Demo: <a href="https://jsquizapps.netlify.app/">https://jsquizapps.netlify.app/ </a></p>
+<p>Demonstration: <a href="https://jsquizapps.netlify.app/">https://jsquizapps.netlify.app/ </a></p>
 <p>Repo: <a href="https://github.com/devsfe/QuizApp">https://github.com/devsfe/QuizApp </a></p>
 <p>Javascript50: <a href="https://github.com/devsfe/Javascript50">https://github.com/devsfe/Javascript50 </a></p>
 
